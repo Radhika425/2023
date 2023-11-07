@@ -5,6 +5,16 @@ commands in Linux
 netstat, ARP, RARP, ip,
 ifconfig, dig, route )
 
+ping www.google.com
+ifconfig
+traceroute www.google.com
+nslookup www.example.com
+netstat -a
+arp -a
+ip addr show
+ip route show
+dig www.google.com
+
 
 ping - ping is the primary TCP/IP command used to troubleshoot connectivity, reachability, and name resolution. Used without parameters, this command displays Help content. You can also use this command to test both the computer name and the IP address of the computer.
 
