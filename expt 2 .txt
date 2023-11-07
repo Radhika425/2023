@@ -6,6 +6,28 @@ netstat, ARP, RARP, ip,
 ifconfig, dig, route )
 
 
+ping - ping is the primary TCP/IP command used to troubleshoot connectivity, reachability, and name resolution. Used without parameters, this command displays Help content. You can also use this command to test both the computer name and the IP address of the computer.
+
+tracert- The command will return output indicating the hops discovered and time (in milliseconds) for each hop.
+Traceroute is a useful tool for determining the response delays and routing loops present in a network pathway across packet switched nodes. It also helps to locate any points of failure encountered while en route to a certain destination.
+
+nslookup - the name of a program that lets users enter a host name and find out the corresponding IP address or domain name system (DNS) record.
+
+netstat - used to show network status.
+
+ifconfig - o assign an address to a network interface and to configure or display the current network interface configuration information.
+
+ip - a Linux networking tool for system and network administrators. IP stands for Internet Protocol and as the name suggests, the tool is used for configuring network interfaces
+
+ARP - The arp command displays and modifies the Internet-to-adapter address translation tables used by the Address in Networks and communication management. The arp command displays the current ARP entry for the host specified by the HostName variable.
+
+RARP - The Reverse Address Resolution Protocol (RARP) is an obsolete computer communication protocol used by a client computer to request its Internet Protocol (IPv4) address from a computer network, when all it has available is its link layer or hardware address, such as a MAC address.
+
+dig - The dig (domain information groper) command is a flexible tool for interrogating DNS name servers. It performs DNS lookups and displays the answers that are returned from the queried name server(s).
+
+route -  allows you to make manual entries into the network routing tables. The route command distinguishes between routes to hosts and routes to networks by interpreting the network address of the Destination variable, which can be specified either by symbolic name or numeric address.
+
+
 Demonstarte the working of the following commands :ping, tracert, nslookup, netstat, ARP,
 RARP, ip, ifconfig, dig, route
 1. Ifconfig
