@@ -1,7 +1,10 @@
-expt 2 n 3
+expt 2 n 3 n 4
+
+4 - https://www.comptia.org/content/articles/what-is-wireshark-and-how-to-use-it
 
 3 - link - https://www.geeksforgeeks.org/implementation-of-static-routing-in-cisco-2-router-connections/
 
+2
 Use basic networking
 commands in Linux
 (ping, tracert, nslookup,
