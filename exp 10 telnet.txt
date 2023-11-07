@@ -1,0 +1,28 @@
+exp 10 telnet
+
+
+https://phoenixnap.com/kb/telnet-linux
+
+Use the following commands to install telnet server
+
+Sudo apt install telnetd -y
+
+sudo systemctl status inetd (Checks if telnet is installed properly by running it)
+
+sudo ufw allow 23/tcp (allows port 23 through firewall on remote machine by running)
+
+Sudo ufw reload
+
+Now the telnet is allowed thru firewall
+
+After this, ensure that Telnet is installed on both machines.
+
+Now to perform REMOTE LOGIN, Follow these steps
+telnet [remote_machine_IP]
+
+Make sure that telnet is installed on both machines and port 23 is allowed through the firewall on the remote machine.
+
+When prompted, enter the account username and password to log in to the system. After logging in, you can operate the other machine remotely.
+
+
+

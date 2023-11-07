@@ -1,0 +1,78 @@
+exp 9 ftp
+
+
+First use the following commands
+
+sudo apt update
+
+sudo apt install vsftpd
+
+sudo systemctl start vsftpd
+
+sudo systemctl enable vsftpd
+
+This will setup the FTP server
+
+After the above steps, you can use the following code
+
+ 
+
+from ftplib import FTP
+
+ 
+
+# Replace with your FTP server details
+
+ftp_server = "10.0.2.15" #You can put your system’s IP address here (find using ifconfig)
+
+ftp_username = "ladkaonubuntu" #You can put default user ID and pass of the system
+
+ftp_password = "LocalLadka@hubuntu"
+
+ 
+
+# Connect to the FTP server
+
+ftp = FTP(ftp_server)
+
+ftp.login(ftp_username, ftp_password)
+
+ 
+
+# List directory contents
+
+print("Directory listing:")
+
+ftp.retrlines('LIST')
+
+ 
+
+# Upload a file to the server
+
+local_file = "file_to_upload.txt"
+
+remote_file = "uploaded_file.txt"
+
+with open(local_file, 'rb') as file:
+
+          ftp.storbinary(f'STOR {remote_file}', file)
+
+ 
+
+# Download a file from the server
+
+downloaded_file = "downloaded_file.txt"
+
+with open(downloaded_file, 'wb') as file:
+
+          ftp.retrbinary(f'RETR {remote_file}', file.write)
+
+ 
+
+# Close the FTP connection
+
+ftp.quit()
+
+ 
+
+print(f"{remote_file} uploaded and {downloaded_file} downloaded.")

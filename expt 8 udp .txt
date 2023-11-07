@@ -1,0 +1,88 @@
+expt 8 udp 
+
+Server Code:
+
+import socket
+
+ 
+
+# Create a UDP socket
+
+server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+
+ 
+
+# Bind the socket to a specific address and port
+
+server_address = ('localhost', 12345)
+
+server_socket.bind(server_address)
+
+ 
+
+print("Server is listening on {}:{}".format(*server_address))
+
+ 
+
+while True:
+
+          # Receive data from the client
+
+          data, client_address = server_socket.recvfrom(1024)
+
+          print("Received data from {}:{}".format(*client_address))
+
+          print("Data received: {}".format(data.decode()))
+
+ 
+
+          # Send a response back to the client
+
+          response = "Hello, client!"
+
+          server_socket.sendto(response.encode(), client_address)
+
+ 
+
+ 
+
+Client Code:
+
+import socket
+
+# Create a UDP socket
+
+client_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+
+ 
+
+# Server address and port
+
+server_address = ('localhost', 12345)
+
+message = "Hello, server!"
+
+ 
+
+# Send data to the server
+
+client_socket.sendto(message.encode(), server_address)
+
+print("Sent data to {}:{}".format(*server_address))
+
+ 
+
+# Receive a response from the server
+
+response, server_address = client_socket.recvfrom(1024)
+
+print("Received response from {}:{}".format(*server_address))
+
+print("Response: {}".format(response.decode()))
+
+ 
+
+# Close the socket
+
+client_socket.close()
+
