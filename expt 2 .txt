@@ -1,4 +1,7 @@
-expt 2 
+expt 2 n 3
+
+3 - link - https://www.geeksforgeeks.org/implementation-of-static-routing-in-cisco-2-router-connections/
+
 Use basic networking
 commands in Linux
 (ping, tracert, nslookup,
